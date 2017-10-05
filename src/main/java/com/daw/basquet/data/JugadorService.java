@@ -297,7 +297,7 @@ public void consultas(){
     System.out.println("Jugadores con más canastas según el equipo:");
     System.out.println("===========================================");
 
-          jugadorRepository.findMaxCanastasPerEquipo("Lakers", new PageRequest(0,5)).forEach(
+          jugadorRepository.findMaxCanastasPerEquipo("Lakers", new PageRequest(0,1)).forEach(
                   jugador -> System.out.println(jugador.getNombre() + ": " + jugador.getNumCanastas() +" canastas.")
           );
            System.out.println(" ");
